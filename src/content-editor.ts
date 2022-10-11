@@ -68,7 +68,13 @@ export class StupidContentEditor extends HTMLElement {
 
   attributeChangedCallback(name: string, _: string, newValue: string) {
     if (name === "trustedhtml") {
-      this.inputField.innerHTML = newValue;
+      try {
+        this.inputField.innerHTML = newValue;
+      } catch {
+        setTimeout(() => {
+          this.inputField.innerHTML = newValue;
+        }, 1000)
+      }
     }
   }
 
@@ -89,4 +95,4 @@ export class StupidContentEditor extends HTMLElement {
 }
 try {
   window.customElements.define("stupid-content-editor", StupidContentEditor);
-} catch {}
+} catch { }
