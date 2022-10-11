@@ -12,7 +12,7 @@ template.innerHTML = `${markup
   .replace("${alignCenter}", alignCenter)
   .replace("${justify}", justify)}`;
 
-export class TextEditor extends HTMLElement {
+export class StupidContentEditor extends HTMLElement {
   inputField!: HTMLDivElement;
   boldButton!: HTMLButtonElement;
   selectElement!: HTMLSelectElement;
@@ -88,5 +88,5 @@ export class TextEditor extends HTMLElement {
   }
 }
 try {
-  window.customElements.define("text-editor", TextEditor);
+  window.customElements.define("stupid-content-editor", StupidContentEditor);
 } catch {}
