@@ -1,0 +1,18 @@
+{
+  "name": "stupid-content-editor",
+  "version": "1.0.0",
+  "description": "A Stupid Content Editor",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "@stupid max",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.8.3",
+    "vite": "^3.1.7"
+  }
+}

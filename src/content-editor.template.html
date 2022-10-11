@@ -1,0 +1,70 @@
+<style>
+    :root {
+        display: block;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100%;
+        grid-template-rows: 0fr 1fr;
+        gap: 1rem;
+        overflow: scroll;
+        border-bottom: 1px solid black;
+    }
+
+    .active {
+        background: gray;
+    }
+
+    .bold {
+        font-weight: bolder;
+    }
+
+    .italic {
+        font-style: italic;
+    }
+
+    .settings {
+        display: grid;
+        grid-template-columns: .5fr .5fr 2fr repeat(4, 0fr);
+        gap: 0.5rem;
+        padding: 1rem 0rem 0;
+    }
+
+    .settings>* {
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    }
+
+    .alignment {
+        width: 35px;
+        height: 35px;
+        padding: 0;
+    }
+
+    .alignment>svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .input-field {
+        border: 1px solid black;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+        padding: 1rem;
+    }
+</style>
+<main>
+    <div class="settings">
+        <button class="bold">B</button>
+        <button class="italic">I</button>
+        <select>
+            <option value="monospace">monospace</option>
+            <option value="Comic Sans MS">Comic Sans</option>
+        </select>
+        <button class="alignment alignLeft">${alignLeft}</button>
+        <button class="alignment alignCenter">${alignCenter}</button>
+        <button class="alignment alignRight">${alignRight}</button>
+        <button class="alignment justify">${justify}</button>
+    </div>
+    <div class="input-field" contenteditable="true"></div>
+</main>
